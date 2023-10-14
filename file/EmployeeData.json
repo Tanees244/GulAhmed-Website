@@ -1,0 +1,66 @@
+{
+  "__collections__": {
+    "users": {
+      "documents": {
+        "documentId1": {
+          "id": 4051,
+          "name": "manoj",
+          "email": "manoj@gmail.com",
+          "password": "Test@123",
+          "about": null,
+          "token": "7f471974-ae46-4ac0-a882-1980c300c4d6",
+          "country": null,
+          "location": null,
+          "lng": 0,
+          "lat": 0,
+          "dob": null,
+          "gender": 0,
+          "userType": 1,
+          "userStatus": 1,
+          "profilePicture": "Images/9b291404-bc2e-4806-88c5-08d29e65a5ad.png",
+          "coverPicture": "Images/44af97d9-b8c9-4ec1-a099-010671db25b7.png",
+          "enablefollowme": false,
+          "sendmenotifications": false,
+          "sendTextmessages": false,
+          "enabletagging": false,
+          "createdAt": "2020-01-01T11:13:27.1107739",
+          "updatedAt": "2020-01-02T09:16:49.284864",
+          "livelng": 77.389849,
+          "livelat": 28.6282231,
+          "liveLocation": "Unnamed Road, Chhijarsi, Sector 63, Noida, Uttar Pradesh 201307, India",
+          "creditBalance": 127,
+          "myCash": 0
+        },
+        "documentId2": {
+          "id": 4050,
+          "name": "pankaj",
+          "email": "p1@gmail.com",
+          "password": "Test@123",
+          "about": null,
+          "token": "e269eeef-1de1-4438-885a-e30a9ad26106",
+          "country": null,
+          "location": null,
+          "lng": 0,
+          "lat": 0,
+          "dob": null,
+          "gender": 0,
+          "userType": 1,
+          "userStatus": 1,
+          "profilePicture": null,
+          "coverPicture": null,
+          "enablefollowme": false,
+          "sendmenotifications": false,
+          "sendTextmessages": false,
+          "enabletagging": false,
+          "createdAt": "2020-01-01T07:39:34.1618239",
+          "updatedAt": "2020-01-01T07:39:34.161824",
+          "livelng": 0,
+          "livelat": 0,
+          "liveLocation": null,
+          "creditBalance": 0,
+          "myCash": 0
+        }
+      }
+    }
+  }
+}
