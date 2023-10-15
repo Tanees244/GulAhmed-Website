@@ -1,40 +1,43 @@
-import React, { useEffect, useState } from 'react';
-import { db } from './firebase'; // Import the Firebase Firestore reference
-import { collection, getDocs } from 'firebase/firestore'; // Add these import statements
+import React, { useState, useEffect } from 'react';
+import { db } from './firebase';
+import { collection, getDocs } from 'firebase/firestore';
 
-function App() {
+function DataDisplay() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const dataRef = collection(db, 'firestore'); // Replace with your Firestore collection name
-
       try {
-        const snapshot = await getDocs(dataRef);
-        const data = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
+        const dataRef = collection(db, 'products');
+        const querySnapshot = await getDocs(dataRef);
 
-        setData(data);
-      } catch (err) {
-        console.error('Error:', err);
+        const documents = [];
+        querySnapshot.forEach((doc) => {
+          documents.push({ id: doc.id, ...doc.data() });
+        });
+
+        setData(documents);
+      } catch (error) {
+        console.error('Error fetching data from Firestore:', error);
       }
     };
 
     fetchData();
-  }, []);
+  }, [db]);
 
   return (
     <div>
-      <h1>My Firestore Data</h1>
+      <h1>Firebase Data</h1>
       <ul>
         {data.map((item) => (
-          <li key={item.id}>{item.name}</li>
+          <li key={item.id}>
+            <p>Name: {item.productID}</p>
+            <p>Price: {item.newPrice}</p>
+          </li>
         ))}
       </ul>
     </div>
   );
 }
 
-export default App;
+export default DataDisplay;

@@ -4,7 +4,7 @@ import DataDisplay from './DataDisplay';
 function App() {
   return (
     <div className="App">
-      <DataDisplay />
+      <DataDisplay/>
     </div>
   );
 }
