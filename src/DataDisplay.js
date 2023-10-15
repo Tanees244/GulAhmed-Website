@@ -14,7 +14,7 @@ function DataDisplay() {
     try {
       const dataRef = collection(db, 'products');
       let sortField;
-      let sortOrder = 'asc'; // Default to ascending
+      let sortOrder = 'asc'; 
   
       if (sortOption === 'priceAsc') {
         sortField = 'newPrice';
@@ -29,11 +29,11 @@ function DataDisplay() {
         sortField = 'discount';
         sortOrder = 'desc';
       } else {
-        sortField = 'dateAdded'; // Sort by date added
+        sortField = 'dateAdded';
         sortOrder = 'asc';
       }
   
-      const q = query(dataRef, orderBy(sortField, sortOrder), limit(12)); // Limit to 12 records
+      const q = query(dataRef, orderBy(sortField, sortOrder), limit(12)); 
       const querySnapshot = await getDocs(q);
   
       const documents = [];
